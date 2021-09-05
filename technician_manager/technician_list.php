@@ -22,7 +22,7 @@
                 <input type="hidden" name="action"
                        value="delete_technician">
                 <input type="hidden" name="technician_id"
-                       value="<?php echo htmlspecialchars($product['techID']); ?>">
+                       value="<?php echo htmlspecialchars($technician['techID']); ?>">
                 <input type="submit" value="Delete">
             </form></td>
         </tr> 
