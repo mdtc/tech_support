@@ -30,12 +30,11 @@ if ($action == 'list_technicians') {
     $phone = filter_input(INPUT_POST, 'phone');
     $password = filter_input(INPUT_POST, 'password');
     // Validate the inputs
-    if ( $first_name === FALSE || $last_name === FALSE || 
-         $email === FALSE || $phone === NULL || 
-         $password === FALSE) {
+    if ( empty($first_name) || empty($last_name) || empty($email)
+      || empty($phone) || empty($password)) {
     $error = "Invalid tech data. Check all fields and try again.";
     include('../errors/error.php');
-    } else{
+    }else{
         add_technician($first_name, $last_name, $email, $phone, $password);
         header("Location: .");
     }
