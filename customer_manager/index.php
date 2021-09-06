@@ -27,8 +27,8 @@ if ($action == 'search_customers') {
     include("customer_search.php");
 } else if ($action == 'display_customer') {
     $customer_id = filter_input(INPUT_POST, 'customer_Id');
-    get_customer($customer_id);
-    header('customer_display.php');
+    $customer = get_customer($customer_id);
+    include("customer_display.php");
 } else if ($action == 'update_customer') {
    // ???
     include('customer_search.php');
