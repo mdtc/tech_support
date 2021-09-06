@@ -29,7 +29,7 @@ if ($action == 'list_technicians') {
     $email = filter_input(INPUT_POST, 'email'); 
     $phone = filter_input(INPUT_POST, 'phone');
     $password = filter_input(INPUT_POST, 'password');
-    // Validate the inputs
+    // Validate the inputs with empty function
     if ( empty($first_name) || empty($last_name) || empty($email)
       || empty($phone) || empty($password)) {
     $error = "Invalid tech data. Check all fields and try again.";

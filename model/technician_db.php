@@ -37,7 +37,23 @@ function add_technician($first_name, $last_name, $email, $phone, $password) {
 }
 
 function update_technician($technician_id, $first_name, $last_name, $email, $phone, $password) {
-    // ???
+    global $db;
+    $query = 'UPDATE technicians
+              SET firstName = :firstName,
+                  lastName = :lastName,
+                  email = :email,
+                  phone = :phone,
+                  password = :password
+              WHERE techID = :techID';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':firstName', $first_name);
+    $statement->bindValue(':lastName', $last_name);
+    $statement->bindValue(':email', $email);
+    $statement->bindValue(':phone', $phone);
+    $statement->bindValue(':password', $password);
+    $statement->bindValue(':techID', $technician_id);
+    $statement->execute();
+    $statement->closeCursor();
 }
 
 ?>

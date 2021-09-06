@@ -1,11 +1,25 @@
 <?php
 function get_customers() {
-    // ???
+    global $db;
+    $query = 'SELECT * FROM customers
+              ORDER BY name';
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $customers = $statement->fetchAll();
+    $statement->closeCursor();
+    return $customers;
 }
 
 function get_customers_by_last_name($last_name) {
-    // ???
+    global $db;
+    $query = 'SELECT * FROM customers where lastName LIKE %$last_name%';
+    $statement = $db->prepare($query);
+    $statement -> execute();
+    $customers = $statement->fetchAll();
+    $statement ->closeCursor();
+    return $customers;
 }
+
 
 function get_customer($customer_id) {
     // ???
