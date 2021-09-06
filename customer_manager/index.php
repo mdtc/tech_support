@@ -26,7 +26,9 @@ if ($action == 'search_customers') {
     $customers = get_customers_by_last_name($last_name);
     include("customer_search.php");
 } else if ($action == 'display_customer') {
+    $customer_id = filter_input(INPUT_POST, 'customer_Id');
     get_customer($customer_id);
+    header('customer_display.php');
 } else if ($action == 'update_customer') {
    // ???
     include('customer_search.php');

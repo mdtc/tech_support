@@ -6,7 +6,7 @@
     <form action="." method="post">
     <input type="hidden" name="action" value="display_customers">
     <label>Last name:</label>
-    <input type="text" name="custLastName" placeholder="Type customer's Last name">
+    <input type="text" name="custLastName" placeholder="Type here to search">
     <input type="submit" value="search" /><br>
     </form>
 

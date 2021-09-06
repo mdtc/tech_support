@@ -22,7 +22,15 @@ function get_customers_by_last_name($last_name) {
 
 
 function get_customer($customer_id) {
-    // ???
+    global $db;
+    $query = 'SELECT * FROM customers
+              WHERE customerID = :customerID';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':customerID', $customer_id);
+    $statement->execute();
+    $customer = $statement->fetch();
+    $statement->closeCursor();
+    return $customer;
 }
 
 function get_customer_by_email($email) {
