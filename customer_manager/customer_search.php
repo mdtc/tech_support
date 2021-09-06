@@ -23,6 +23,7 @@
                 <th>&nbsp;</th>
             </tr>
             <?php foreach ($customers as $customer) : ?>
+            <tr>
                 <td><?php echo htmlspecialchars($customer['lastName']); ?></td>
                 <td><?php echo htmlspecialchars($customer['firstName']); ?></td>
                 <td><?php echo htmlspecialchars($customer['email']); ?></td>
@@ -34,7 +35,7 @@
                        value="<?php echo htmlspecialchars($customer['customerID']); ?>">
                 <input type="submit" value="Select">
             </form></td>
-
+            </tr>
             <?php endforeach; ?>
         </table>
     <?php endif; ?>

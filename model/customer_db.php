@@ -12,15 +12,7 @@ function get_customers() {
 
 function get_customers_by_last_name($last_name) {
     global $db;
-<<<<<<< HEAD
     $query = "SELECT * FROM customers where lastName LIKE '%$last_name%'";
-=======
-<<<<<<< HEAD
-    $query = "SELECT * FROM customers where lastName LIKE '%$last_name%'";
-=======
-    $query = 'SELECT * FROM customers where lastName LIKE %:last_name%';
->>>>>>> 8a3b3c1e16ae3afe18fb124a7341985ff6876a7c
->>>>>>> 5b7595cd2c70b18e53e76b44a824df5af6c84b35
     $statement = $db->prepare($query);
     $statement -> execute();
     $customers = $statement->fetchAll();

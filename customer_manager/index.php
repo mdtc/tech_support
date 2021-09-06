@@ -24,7 +24,7 @@ if ($action == 'search_customers') {
         $message = "No customers found";
     };
     $customers = get_customers_by_last_name($last_name);
-    header("Location: .");
+    include("customer_search.php");
 } else if ($action == 'display_customer') {
     get_customer($customer_id);
 } else if ($action == 'update_customer') {
