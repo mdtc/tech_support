@@ -11,14 +11,15 @@
             <tr>
                 <th>Customer: </th>
                 <td><?php echo htmlspecialchars($customer['firstName'] . " " . $customer['lastName']); ?></td>
+                <input type="hidden" name="customer_id" value=<?php echo htmlspecialchars($customer['customerID']); ?>>
             </tr>
             <?php endforeach; ?>
             <tr>    
                 <th>Product:</th>
             <td>
                 <select>
-                    <?php foreach ($products as $product) : ?>
-                    <option name="chosen_product" value=<?php echo htmlspecialchars($product['name']); ?>><?php echo htmlspecialchars($product['name']); ?></option>        
+                     <?php foreach ($products as $product) : ?>
+                    <option name="product_id" value=<?php echo htmlspecialchars($product['productCode']); ?>><?php echo htmlspecialchars($product['name']); ?></option> 
                     <?php endforeach; ?>
                 </select>
             </td>    
