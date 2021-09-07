@@ -2,8 +2,8 @@
 <main>
 
     <h2>Register Product</h2>
-    <?php if (isset($success)) : ?>
-        <p><?php  echo $message;?></p><br>
+    <?php if ($success) : ?>
+        <p><?php  echo $success;?></p><br>
     <?php elseif($issue): ?>
         <p><?php  echo $issue;?></p><br>
     
