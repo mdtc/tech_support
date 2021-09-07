@@ -34,7 +34,15 @@ function get_customer($customer_id) {
 }
 
 function get_customer_by_email($email) {
-    // ???
+    global $db;
+    $query = 'SELECT * FROM customers
+              WHERE email = :email';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':email', $email);
+    $statement->execute();
+    $customer = $statement->fetchAll();
+    $statement->closeCursor();
+    return $customer;
 }
 
 function delete_customer($customer_id) {

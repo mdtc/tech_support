@@ -10,8 +10,6 @@ if ($action === NULL) {
     }
 }
 
-
-
 //instantiate variable(s)
 $last_name = '';
 $customers = array();
