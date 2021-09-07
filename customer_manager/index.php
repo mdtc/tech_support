@@ -30,7 +30,24 @@ if ($action == 'search_customers') {
     $customer = get_customer($customer_id);
     include("customer_display.php");
 } else if ($action == 'update_customer') {
-   // ???
+    echo("update button working");
+
+    $customer_id = filter_input(INPUT_POST, 'customerID');
+    $first_name = filter_input(INPUT_POST, 'firstName');
+    $last_name = filter_input(INPUT_POST, 'lastName');
+    $address = filter_input(INPUT_POST, 'address');
+    $city = filter_input(INPUT_POST, 'city');
+    $state = filter_input(INPUT_POST, 'state');
+    $postal_code = filter_input(INPUT_POST, 'postalCode');
+    $country_code = filter_input(INPUT_POST, 'countryCode');
+    $phone = filter_input(INPUT_POST, 'phone');
+    $email = filter_input(INPUT_POST, 'email');
+    $password = filter_input(INPUT_POST, 'password');
+    
+    update_customer($customer_id, $first_name, $last_name,
+        $address, $city, $state, $postal_code, $country_code,
+        $phone, $email, $password);    
+    
     include('customer_search.php');
 }
 ?>

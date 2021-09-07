@@ -28,7 +28,7 @@
         <input type="text" name="countryCode" value=<?php echo htmlspecialchars($customer['countryCode']); ?>><br>
 
         <label>Phone: </label>
-        <input type="text" name="phone" value=<?php echo htmlentities($customer["phone"]); ?>><br>
+        <input type="tel" name="phone" pattern="\(\d{3}\)\s?\d{3}-\d{4}" value="<?php echo $customer['phone'];?>" placeholder="Use (123)_123-4567 format"><br>
 
         <label>Email: </label>
         <input type="text" name="email" value=<?php echo htmlspecialchars($customer['email']); ?>><br>
@@ -36,11 +36,11 @@
         <label>Password: </label>
         <input type="text" name="password" value=<?php echo htmlspecialchars($customer['password']); ?>><br>
 
+        <input type="hidden" name="customerID" value="<?php echo htmlspecialchars($product['customerID']); ?>"><br>
 
-
-
+        <input type="submit" value="Update Customer">
     </form>
-    <p><a href="">Search Customers</a></p>
+    <p><a href="customer_search.php">Search Customers</a></p>
 
 </main>
 <?php include '../view/footer.php'; ?>
