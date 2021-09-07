@@ -17,11 +17,12 @@
             <tr>    
                 <th>Product:</th>
             <td>
-                <select>
+                <input list="products" name='product_id'>
+                <datalist id="products">
                      <?php foreach ($products as $product) : ?>
-                    <option name="product_id" value=<?php echo htmlspecialchars($product['productCode']); ?>><?php echo htmlspecialchars($product['name']); ?></option> 
+                    <option value=<?php echo htmlspecialchars($product['productCode']); ?>><?php echo htmlspecialchars($product['name']); ?></option> 
                     <?php endforeach; ?>
-                </select>
+                </datalist>
             </td>    
             </tr>
             <tr> 
