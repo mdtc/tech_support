@@ -36,7 +36,7 @@
         <label>Password: </label>
         <input type="text" name="password" value=<?php echo htmlspecialchars($customer['password']); ?>><br>
 
-        <input type="hidden" name="customerID" value="<?php echo htmlspecialchars($product['customerID']); ?>"><br>
+        <input type="hidden" name="customerID" value="<?php echo htmlspecialchars($customer['customerID']); ?>"><br>
 
         <input type="submit" value="Update Customer">
     </form>

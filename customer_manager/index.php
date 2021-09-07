@@ -30,8 +30,6 @@ if ($action == 'search_customers') {
     $customer = get_customer($customer_id);
     include("customer_display.php");
 } else if ($action == 'update_customer') {
-    echo("update button working");
-
     $customer_id = filter_input(INPUT_POST, 'customerID');
     $first_name = filter_input(INPUT_POST, 'firstName');
     $last_name = filter_input(INPUT_POST, 'lastName');
