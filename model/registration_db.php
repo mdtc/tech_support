@@ -1,6 +1,7 @@
 <?php
 function add_registration($customer_id, $product_code) {
     global $db;
+    date_default_timezone_set('Australia/Brisbane');
     $date = date('Y-m-d H:i:s');
     $query = 'INSERT INTO registrations
                     (customerID, productCode, registrationDate)
