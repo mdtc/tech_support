@@ -1,6 +1,6 @@
 <?php include '../view/header.php'; ?>
 <main>
-
+<div  class="mainMenu2">
     <h2>Register Product</h2>
     <?php if (isset($message)) : ?>
         <p><?php  echo $message;?></p>
@@ -35,5 +35,6 @@
         </table>
         </form>
     <?php endif; ?>
+</div>
 </main>
 <?php include '../view/footer.php'; ?>

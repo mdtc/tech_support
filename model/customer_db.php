@@ -46,13 +46,13 @@ function get_customer_by_email($email) {
 }
 
 function delete_customer($customer_id) {
-    // ???
+    // Fucntion for For next Assignment
 }
 
 function add_customer($first_name, $last_name, 
         $address, $city, $state, $postal_code, $country_code,
         $phone, $email, $password) {
-    // ???
+    // Fucntion for For next Assignment
 }
 
 function update_customer($customer_id, $first_name, $last_name,

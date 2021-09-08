@@ -1,5 +1,6 @@
 <?php include '../view/header.php'; ?>
 <main>
+<div class="mainMenu2"> 
     <h1>Product List</h1>
     <!-- display a table of products -->
     <table>
@@ -26,7 +27,7 @@
         </tr>
         <?php endforeach; ?>
     </table>
-    <p><a href="?action=show_add_form">Add Product</a></p>
-
+    <p class="button"><a href="?action=show_add_form">Add Product</a></p>
+</div>
 </main>
 <?php include '../view/footer.php'; ?>

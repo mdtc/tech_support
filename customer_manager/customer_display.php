@@ -1,5 +1,8 @@
 <?php include '../view/header.php'; ?>
 <main>
+ <div class="mainMenu2">
+
+ 
 
     <!-- display a table of customer information -->
     <h2>View/Update Customer</h2>
@@ -28,7 +31,8 @@
         <input type="text" name="countryCode" value=<?php echo htmlspecialchars($customer['countryCode']); ?>><br>
 
         <label>Phone: </label>
-        <input type="tel" name="phone" pattern="\(\d{3}\)\s?\d{3}-\d{4}" value="<?php echo $customer['phone'];?>" placeholder="Use (123)_123-4567 format"><br>
+        <input type="tel" name="phone" pattern="\(\d{3}\)\s?\d{3}-\d{4}" value="<?php echo $customer['phone'];?>" placeholder="Use (123)_123-4567 format">
+        <label class="message">Use (123) 986-9876 format</label><br><br>
 
         <label>Email: </label>
         <input type="text" name="email" value=<?php echo htmlspecialchars($customer['email']); ?>><br>
@@ -39,8 +43,8 @@
         <input type="hidden" name="customerID" value="<?php echo htmlspecialchars($customer['customerID']); ?>"><br>
 
         <input type="submit" value="Update Customer">
-    </form>
-    <p><a href="customer_search.php">Search Customers</a></p>
-
+    </form><br>
+    <p class="button"><a class="" href="customer_search.php">Go Back</a></p>
+</div>
 </main>
 <?php include '../view/footer.php'; ?>

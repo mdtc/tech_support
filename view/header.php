@@ -3,9 +3,9 @@
 
 <!-- the head section -->
 <head>
-    <title>SportsPro(test22) Technical Support</title>
+    <title>SportsPro Technical Support</title>
     <link rel="stylesheet" type="text/css"
-          href="./main.css">
+          href="/tech_support/main.css">
 </head>
 
 <!-- the body section -->
@@ -15,7 +15,7 @@
     <p>Sports management software for the sports enthusiast</p>
     <nav>
         <ul>
-            <li><a href="/tech_support/">Home</a></li>
+            <li class="buttonHome"><a href="/tech_support/">Home</a></li>
         </ul>
     </nav>
 </header>
