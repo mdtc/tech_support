@@ -1,6 +1,6 @@
 <?php include '../view/header.php'; ?>
 <main>
-    <div  class="mainMenu">
+    <div  class="mainMenu2">
 
         <h2>Customer Search</h2>
         
