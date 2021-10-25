@@ -17,4 +17,22 @@ function add_incident($customer_id, $product_code, $title, $description) {
     $statement->execute();
     $statement->closeCursor();
 }
+
+
+
+function get_incident($customer_id){
+    global $db;
+    $query =
+        'SELECT * from incidents
+        WHERE customerID = :customerID';
+       $statement = $db->prepare($query);
+    $statement->bindValue(':customerID', $customer_id);
+    $statement->execute();
+    $customer = $statement->fetchAll();
+    $statement->closeCursor();
+    return $incident; 
+}
+
+
+
 ?>
