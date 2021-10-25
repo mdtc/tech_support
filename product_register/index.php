@@ -28,7 +28,7 @@ if ($action == 'login_customer') {
     include('product_register.php');
 } else if ($action == 'register_product') {
 
-    $customer_id = filter_input(INPUT_POST, 'customer_id');
+    $customer_id = filter_input(INPUT_POST, 'customer_id', FILTER_VALIDATE_INT);
     $product_code = filter_input(INPUT_POST, 'product_id');
     $result = add_registration($customer_id, $product_code);
     if($result){
