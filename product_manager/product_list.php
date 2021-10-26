@@ -12,11 +12,12 @@
             <th>&nbsp;</th>
         </tr>
         <?php foreach ($products as $product) : ?>
+            <?php  $old_date =  $product['releaseDate'];              ?>
         <tr>
             <td><?php echo htmlspecialchars($product['productCode']); ?></td>
             <td><?php echo htmlspecialchars($product['name']); ?></td>
             <td><?php echo htmlspecialchars($product['version']); ?></td>
-            <td><?php echo htmlspecialchars($product['releaseDate']); ?></td>
+            <td><?php echo htmlspecialchars(date("j-n-Y" ,strtotime($old_date))) ?></td>
             <td><form action="." method="post">
                 <input type="hidden" name="action"
                        value="delete_product">

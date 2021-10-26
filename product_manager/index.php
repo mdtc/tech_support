@@ -27,7 +27,7 @@ if ($action == 'list_products') {
     $code = filter_input(INPUT_POST, 'code');
     $name = filter_input(INPUT_POST, 'name');
     $version = filter_input(INPUT_POST, 'version', FILTER_VALIDATE_FLOAT);
-    $release_date = filter_input(INPUT_POST, 'release_date');
+    $release_date = date("Y-m-d H:i:s" ,strtotime(filter_input(INPUT_POST, 'release_date')));
     // Validate the inputs
     if ( $code === NULL || $name === FALSE || 
             $version === NULL || $version === FALSE || 
