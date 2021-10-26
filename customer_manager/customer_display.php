@@ -27,8 +27,16 @@
         <label>Postal Code: </label>
         <input type="text" name="postalCode" value=<?php echo htmlspecialchars($customer['postalCode']); ?>><br>
 
-        <label>Country Code: </label>
-        <input type="text" name="countryCode" value=<?php echo htmlspecialchars($customer['countryCode']); ?>><br>
+        <label>Country: </label>
+        <div class="stylish">
+            <select name="countryCode" class="country_select">
+                <?php foreach($countries as $country) :?>
+                <option <?php if($country['countryCode'] == $c_country) echo 'selected="selected"'; ?> 
+                value=<?php echo htmlspecialchars($country['countryCode']);?>><?php echo htmlspecialchars($country['countryName']);?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <br>
 
         <label>Phone: </label>
         <input type="tel" name="phone" pattern="\(\d{3}\)\s?\d{3}-\d{4}" value="<?php echo $customer['phone'];?>" placeholder="Use (123)_123-4567 format">

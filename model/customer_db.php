@@ -45,6 +45,18 @@ function get_customer_by_email($email) {
     return $customer;
 }
 
+function get_country() {
+    global $db;
+    $query = 'SELECT * FROM countries';
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $countries = $statement->fetchAll();
+    $statement->closeCursor();
+    return $countries;
+}
+
+
+
 function delete_customer($customer_id) {
     global $db;
     $query = 'DELETE FROM customers

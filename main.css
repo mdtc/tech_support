@@ -242,3 +242,10 @@ textarea {
      font-size: smaller;
  }
 
+
+ .stylish{
+     display: inline;
+    margin-right: 21%;
+     background-color: red;
+ }
+
