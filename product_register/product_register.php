@@ -33,8 +33,12 @@
             </form></td>
             </tr>  
         </table>
+         <?php if (isset($_COOKIE['Cookie_login'])) : ?>
+        <div>You are Logged as  <?php echo htmlspecialchars($_COOKIE['Cookie_login']);?></div>
+        <p><a class="button2" href="?action=delete_cookie">Logout</a></p>
         </form>
-    <?php endif; ?>
-</div>
+        </div>
+        <?php endif; ?>
+        <?php endif; ?>
 </main>
 <?php include '../view/footer.php'; ?>

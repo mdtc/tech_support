@@ -10,7 +10,7 @@
             
             <?php endif; ?>
             
-    <p><a class="button2" href="customer_login.php">Register another product</a></p>
+    <p><a class="button2" href="?action=login_customer">Register another product</a></p>
             
 </div>
 </main>
