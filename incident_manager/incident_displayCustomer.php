@@ -15,11 +15,9 @@
         </tr>
             <th><label for="code">Product:</label></th>
             <td><select name="code" id="code">
-                <option value="LEAG10">League Scheduler 1.0</option>
-                <option value="LEAGD10">League Scheduler Deluxe 1.0</option>
-                <option value="TEAM10">Team Manager Version 1.0</option>
-                <option value="TRNY10">Tournament Master Version 1.0</option>
-                <option value="TRNY20">Tournament Master Version 2.0</option>
+                <?php foreach($products as $product) :?>
+                <option value=<?php echo htmlspecialchars($product['productCode'])?>><?php echo htmlspecialchars($product['name'])?></option>
+                <?php endforeach; ?>
             </select></td>
         </tr>
         <tr>

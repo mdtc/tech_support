@@ -38,6 +38,6 @@ if ($action == 'incident_getCustomer') {
     include('../errors/error.php');
     }else{
         add_incident($customer_id, $product_code, $title, $description);
-        header("Location: .");
+        include('incident_success.php');
     };
 }
