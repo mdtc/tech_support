@@ -1,6 +1,5 @@
 <?php
 
-
 class Technician extends TechnicianDB{
 
 
@@ -9,6 +8,8 @@ class Technician extends TechnicianDB{
         foreach($names as $name){
             $first = $name['firstName']; 
             $last = $name['lastName'];
+
+            $full_Name[] = $first . " " . $last;
         }
 
         return $full_Name;

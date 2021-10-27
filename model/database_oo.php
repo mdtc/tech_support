@@ -3,23 +3,22 @@
 
 class Database{
 
-    private $dsn;
+    private $server;
     private $username;
     private $password;
+    private $dbname;
 
     protected function connect(){
-        $this -> dsn = 'mysql:host=localhost;dbname=tech_support';
+        $this -> server = 'localhost';
         $this -> username = 'ts_user';
         $this -> password  = 'pa55word';
+        $this -> dbname = 'tech_support';
 
-        $conn = new PDO($this->dsn, $this->username, $this->password  ); 
-
+        $conn = new Mysqli($this->server, $this->username, $this->password, $this->dbname);        
         return $conn;
-
     }
 
 };
-
 
 
 ?>

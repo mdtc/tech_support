@@ -41,6 +41,11 @@
                         <?php endforeach; ?>
                     </table>
                     <?php endif; ?>
+
+            <form action="." method="post">
+            <input type="hidden" name="action" value="add_customer">
+            <input type="submit" value="Add Costumer" /><br>
+            </form>
     </div>
 </main>
 <?php include '../view/footer.php'; ?>

@@ -1,6 +1,9 @@
 <?php
 require('../model/database.php');
 require('../model/technician_db.php');
+require('../model/database_oo.php');
+require('../model/technician_db_oo.php');
+require('technician.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action === NULL) {
@@ -13,6 +16,9 @@ if ($action === NULL) {
 if ($action == 'list_technicians') {
     // get the technicians from db
     $technicians = get_technicians();
+    $FullName = new Technician;
+    $techs_name =  $FullName -> getFullName();
+    $i = 0;
     //Display technicians list
     include('technician_list.php');
     // Delete technicians

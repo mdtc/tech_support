@@ -30,7 +30,7 @@ switch($action){
         };
         $customers = get_customers_by_last_name($last_name); 
         include("customer_search.php");
-
+    continue;
 
     case 'display_customer';
         $customer_id = filter_input(INPUT_POST, 'customer_Id');
@@ -38,9 +38,13 @@ switch($action){
         $c_country = $customer['countryCode'];
         $countries = get_country();
         include("customer_display.php");
+    continue;
     
     case 'update_customer';
         $customer_id = filter_input(INPUT_POST, 'customerID');
+        if($customer_id == ""){
+            $customer_id = rand(2000, 9999);
+        }
         $first_name = filter_input(INPUT_POST, 'firstName');
         $last_name = filter_input(INPUT_POST, 'lastName');
         $address = filter_input(INPUT_POST, 'address');
@@ -59,11 +63,18 @@ switch($action){
         $error = "Invalid tech data. Check all fields and try again.";
         include('../errors/error.php');
         }else{
-            update_customer($customer_id, $first_name, $last_name,
-            $address, $city, $state, $postal_code, $country_code,
-            $phone, $email, $password);
-            include('customer_success.php');
-        };  
+        update_customer($customer_id, $first_name, $last_name,
+        $address, $city, $state, $postal_code, $country_code,
+        $phone, $email, $password);
+        include('customer_success.php');
+        }; 
+    continue;
+    
+    case 'add_customer'; 
+        $c_country = "US";
+        $countries = get_country();
+        include("customer_display.php");
+        
 
     }
 
