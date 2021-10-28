@@ -73,8 +73,8 @@ switch($action){
     case 'add_customer'; 
         $c_country = "US";
         $countries = get_country();
-        include("customer_display.php");
-        
+        $add = True;
+        include("customer_display.php");    
 
     }
 

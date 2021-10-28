@@ -249,3 +249,12 @@ textarea {
      background-color: red;
  }
 
+
+ .errorDB{
+    background-color: rgba(0, 0, 0, .6);
+
+    font-weight: bolder;
+    color: white;
+    font-size: larger;
+ }
+
