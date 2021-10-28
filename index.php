@@ -1,7 +1,7 @@
 <?php include 'view/header.php'; ?>
 <main>
     <nav class="mainMenu">    
-    <h2>Administrators</h2>
+    <h2>Options</h2>
     <ul>
         <li><a href="product_manager">Manage Products</a></li>
         <li><a href="technician_manager">Manage Technicians</a></li>
@@ -17,9 +17,9 @@
         <li class="hidden"><a href="under_construction.php">Update Incident</a></li>
     </ul>
 
-    <h2>Customers</h2>
+    <h2 class="hidden">Customers</h2>
     <ul>
-        <li><a href="product_register">Register Product</a></li>
+        <li class="hidden"><a href="product_register">Register Product</a></li>
     </ul>
     </nav>
 </main>

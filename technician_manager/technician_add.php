@@ -6,19 +6,19 @@
             <input type="hidden" name="action" value="add_technician">
             
             <label>First Name:</label>
-            <input type="text" name="firstName"><br>
+            <input type="text" name="firstName" required><br>
             
             <label>Last Name:</label>
-            <input type="text" name="lastName"><br>
+            <input type="text" name="lastName" required><br>
             
             <label>Email:</label>
-            <input type="text" name="email"><br>
+            <input type="text" name="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br>
             
             <label>Phone:</label>
-            <input type="text" name="phone" /><br>
+            <input type="text" name="phone" required /><br>
             
             <label>Password:</label>
-            <input type="text" name="password" /><br>
+            <input type="text" name="password" required /><br>
             
             
             <label>&nbsp;</label>

@@ -17,7 +17,7 @@
             <tr>    
                 <th>Product:</th>
             <td>
-                <input list="products" name='product_id'>
+                <input list="products" name='product_id' required>
                 <datalist id="products">
                      <?php foreach ($products as $product) : ?>
                     <option value=<?php echo htmlspecialchars($product['productCode']); ?>><?php echo htmlspecialchars($product['name']); ?></option> 

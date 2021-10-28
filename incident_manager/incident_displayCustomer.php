@@ -22,11 +22,11 @@
         </tr>
         <tr>
             <th><label for="title">Title: </label></th>
-            <td><input type="text" id='title' name='title' ></td>
+            <td><input type="text" id='title' name='title' required ></td>
         </tr>
         <tr>
             <th>Description: </th>
-            <td><textarea name="description" id="" cols="30" rows="10" value='description'></textarea></td>
+            <td><textarea name="description" id="" cols="30" rows="10" value='description' required></textarea></td>
         </tr>
       
     
